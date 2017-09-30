@@ -1,4 +1,4 @@
-package com.gluttony.main;
+package com.gluttony.pdf2html;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
