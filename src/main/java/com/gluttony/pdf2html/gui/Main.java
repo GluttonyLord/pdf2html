@@ -1,5 +1,7 @@
-package com.gluttony.pdf2html;
+package com.gluttony.pdf2html.gui;
 
+import com.gluttony.pdf2html.gui.mainpane.MainController;
+import com.gluttony.pdf2html.gui.mainpane.MainPane;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -17,13 +19,10 @@ public class Main extends Application {
 
     public void start(Stage stage) throws Exception {
         stage.setTitle("Hello World!");
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(actionEvent -> logger.info("Hello World!"));
 
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        stage.setScene(new Scene(root, 300, 250));
+        MainController mainController = new MainController();
+
+        stage.setScene(new Scene(mainController.getMainPane(), 300, 250));
         stage.show();
     }
 }
